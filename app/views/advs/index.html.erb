@@ -1,0 +1,59 @@
+<!-- <h1>Advs</h1>
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @advs.each do |adv| %>
+    <% if adv.user_id == current_user.id%>
+      <tr>
+        <td><%= adv.id %></td>
+        <td class="thumbnail"> <%= image_tag adv.photo.url %></td>
+        <td><%= link_to adv.user_id, adv_path(adv) %></td>
+        <td><%= adv.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_adv_path(adv), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', adv_path(adv), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+
+</table>
+
+<%= link_to 'New', new_adv_path, :class => 'btn btn-primary' %>
+-->
+<div class="mgap"></div>
+<div class="mgap"></div>
+<div class="mgap"></div>
+<% if @advs%>
+<h4 align="center" class="about">Click on the image to see full ad</h2>
+<%else %>
+<h4 align="center" class="about">You have no ads to display. Start with creating a new ad</h2>
+<%end%>
+<table class="table">
+	<tbody>
+    <% @advs.each do |adv| %>
+    
+    <% if adv.user_id == current_user.id%>
+      <tr>
+        <td class="thumbnail"><a style="" href="<%=  adv_path(adv) %>"> <%= image_tag adv.photo.url, :size => "80x40" ,:alt => "Image missing" %></a></td>
+        <td>
+          <%= link_to 'Edit', edit_adv_path(adv), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', adv_path(adv), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+	
+</table>
+
+<%= link_to 'New', new_adv_path, :class => 'btn btn-primary' %>

@@ -1,0 +1,22 @@
+<h1>/Session</h1>
+
+<p>
+  <b>User</b><br>
+  <%= @session.user_id %>
+</p>
+
+<p>
+  <b>Provider</b><br>
+  <%= @session.provider %>
+</p>
+
+<p>
+  <b>Uid</b><br>
+  <%= @session.uid %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', sessions_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_session_path(@session), :class => 'btn' %>
+  <%= link_to 'Delete', session_path(@session), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

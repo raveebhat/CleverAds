@@ -1,0 +1,31 @@
+<style type="text/css">
+  #widget-embed-widget {
+    width: 250px;
+    height:250px;
+    overflow:auto;
+    padding: 4px;
+    border: 1px solid black;
+    font-family:verdana;
+    background-color:#d6caff;
+    color: #333;
+  }  
+  #widget-embed-widget h3 {
+    font-size: 16px;
+    color: #000;
+    text-align:center;
+    margin: 4px auto;
+  }
+  #widget-embed-widget h3 em {
+    font-size: 14px;
+    text-style: italic;
+    color: #333;
+  }
+</style>
+    
+<div id="dianosaur-embed-widget">
+    <h3><%= widget.name %></h3>
+    
+    <div class="widget-embed-content">
+      <%= widget.description %>
+    </div>
+</div> 

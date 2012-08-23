@@ -1,0 +1,97 @@
+@import "twitter/bootstrap/bootstrap";
+body { padding-top: 100px; }
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+
+html, body {
+  height: 100%;
+  background:#FFFFFF;/*282A2D*/
+  width: 100%;
+  padding: 0;
+  background-image: url('titleBar.jpg');
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+}
+.container-fluid
+{
+  width: 100%;
+  min-height:100%;
+  position:relative;
+}
+
+.navbar {
+  position: relative; 
+  width: 100%;
+}
+
+.navbar-fluid {
+  position: relative; 
+  color: #10A7D0;
+  width: 100%;
+}
+
+.well {
+  position:relative;
+}
+
+.span2
+{
+  width:15%;
+}
+
+
+.span12
+{
+  position:relative;
+  width:100%;
+  background-color:#EBF0F1;
+  margin-left: 0;
+}
+
+.nav > li > a:hover {
+  /*text-decoration: none;*/
+ 
+  background-color: green;
+}
+
+.nav > li > a {
+  display: block;
+  /*font-family: 'Bree Serif', serif;*/
+  font-family: 'Fredoka One', cursive;  
+}
+
+
+
+h3 {
+  font-family: 'Russo One', sans-serif;
+  color:#430303;
+}
+
+footer {
+  margin-bottom:0;
+  margin: 0 auto -4em;
+  height: 100px;
+  width: 1130px;
+  
+  
+}
+
+td a:hover{
+  background: none;
+}
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;

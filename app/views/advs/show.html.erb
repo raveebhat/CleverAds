@@ -1,0 +1,65 @@
+<!-- <h1>/Adv</h1>
+
+<p>
+  <b>User</b><br>
+  <%= @adv.user_id %>
+</p>
+
+<p>
+  <b>Language</b><br>
+  <%= @adv.language_id %>
+</p>
+
+<p>
+  <b>Title</b><br>
+  <%= @adv.title %>
+</p>
+
+<p>
+  <b>Desturl</b><br>
+  <%= @adv.desturl %>
+</p>
+
+<p class="thumbnail">
+
+  <b>Image</b><br>
+   <!-- <%= @adv.image %> 
+   <%= image_tag @adv.photo.url %>  
+
+
+<p>
+  <b>Bodytext</b><br>
+  <%= @adv.bodytext %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', advs_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_adv_path(@adv), :class => 'btn' %>
+  <%= link_to 'Delete', adv_path(@adv), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
+-->
+
+<div class="container-fluid">
+	<div class="row-fluid">
+    	<div class="span7">
+    		<div class="thumbnails">
+				<li class="span8">
+					<br />
+  					<p style="padding-left: 100px"><strong class="about"><%= @adv.title %></strong></p>
+ 					<a href="<%= @adv.desturl %>"><%= image_tag @adv.photo.url, :alt => "No Images to show. Add an image to the ad.", :size => "200x100" %></a>
+ 				</li>
+ 			</div>
+ 			<div class="form-actions">
+  				<%= link_to 'Back', advs_path, :class => 'btn'  %>
+  				<%= link_to 'Edit', edit_adv_path(@adv), :class => 'btn' %>
+  				<%= link_to 'Delete', adv_path(@adv), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+			</div>
+  		</div>
+    	<div class="span4" style="width: 350px">
+    		<br />
+    		<strong class="about"><%= @adv.bodytext %></strong>
+   		</div>
+   		
+	</div>
+	<%= link_to 'New', new_adv_path, :class => 'btn btn-primary' %>
+</div>

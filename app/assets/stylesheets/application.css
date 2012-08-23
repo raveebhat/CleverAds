@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+html, body {
+  height: 100%;
+  background:#FFFFFF;/*282A2D*/
+  width: 100%;
+  padding: 0;
+  background-image: url('titleBar.jpg');
+  background-repeat: repeat-x;
+}
+
+.header {
+	
+	height: 100px;
+	width: 100%;
+	
+}
+
+
+.logo {
+	position:relative;
+	width: 446px;
+	height: 100px;
+	background-image: url('cleverads.png');	
+
+}
+.login {
+	position:relative;
+	width : 100%;
+	height: 100%;
+	background-image: url('google-sign-in.png');
+		
+}
+.leftside{
+	margin-left: 0;
+	height:37px;
+	position: relative;
+	width :70%;
+	
+}
+
+.rightside{
+	margin-right: 0;
+	height:37px;
+	position: relative;
+	width :18%;
+	background-color:#000000;
+	background-image: url('google-sign-in.png');
+}
+
+.abovelogin{
+	position:relative;
+	height: 55px;
+}
+
+.wrapper{
+  height: 1000px;
+  margin: 0 auto -4em;
+  width: 1130px;
+  position:relative;
+  min-height:100%;
+}
+
+.mgap{ height: 10px; }
+.sgap{ height: 5px; }
+
+.navbar {
+  position: relative;	
+  color: #000000;
+  width: 100%;
+}
+
+.sidebarArea
+{
+	position: relative;
+}
+
+.bodyArea
+{
+	position:relative;
+	width: 80%;
+		
+}
+.left-panel {
+  /*min-height: 100%;
+  height: auto !important;
+  height: 100%;*/
+  position: relative;
+  top: 0px;
+  height: 100%;
+  margin: 0;
+  width:100%;
+  float:left;
+  background:#2A2A2A;
+  
+}
+h3 {
+	font-family: 'Russo One', sans-serif;
+	
+}
+
+.about{
+	font-family: 'Bree Serif', serif;
+	font-size: medium;
+}
+
+.mwhitegap {
+	height: 10px;
+	background-color: white;
+}
+
+.widget_customize {
+	font-family: 'Bree Serif', serif;
+	font-size: medium;
+}
+
+ #dianosaur-embed-widget {
+    width: 250px;
+    height:250px;
+    overflow:auto;
+    padding: 4px;
+    border: 1px solid black;
+    font-family:verdana;
+    background-color:#d6caff;
+    color: #333;
+  }  
+  
+#dianosaur-embed-widget h3 {
+    font-size: 16px;
+    color: #000;
+    text-align:center;
+    margin: 4px auto;
+  }
+  
+ #dianosaur-embed-widget h3 em {
+    font-size: 14px;
+    
+    color: #333;
+  }
+

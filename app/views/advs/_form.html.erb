@@ -1,0 +1,62 @@
+<%= form_for @adv, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Adv</legend>
+
+   <!-- <div class="control-group">
+      <%= f.label :user_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :user_id, :class => 'number_field' %>
+      </div>
+    </div>
+  -->
+    <div class="control-group">
+      <%= f.label :language_id, :class => 'control-label' %>
+      <div class="controls">
+      	<%= select(:adv, :language_id, [['English', 1], ['Hindi', 2], ['Kannada', 3], ['Others', 4]]) %>
+    
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :title, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :title, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :desturl, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.url_field :desturl, :class => 'url_field' %>
+      </div>
+    </div>
+
+ <!--   <div class="control-group">
+          <%= f.label :image, :class => 'control-label' %>
+          <div class="controls">
+              <%= f.file_field :image, :class => 'file_field' %>
+          </div>
+       </div>
+ -->
+    <div class="control-group">
+      <%= f.label :photo, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.file_field :photo, :class => 'file_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :bodytext, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :bodytext, :rows => '10', :class => 'text_area' %>
+      </div>
+    </div>
+    
+    
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', advs_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

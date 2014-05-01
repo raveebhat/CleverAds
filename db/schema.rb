@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20120425094846) do
     t.string   "desturl"
     t.binary   "image"
     t.text     "bodytext"
-    t.datetime "created_at",         :null => false
+    t.datetime "created_at",         :null => true
     t.datetime "updated_at",         :null => false
     t.string   "photo_file_name"
     t.string   "photo_content_type"
